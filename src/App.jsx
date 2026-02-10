@@ -1,12 +1,15 @@
 import './App.css'
+import Footer from './component/Footer/Footer'
 import Header from './component/Navbar/Header'
 function App() {
 
   return (
-    <>
-    <Header expand="md" container="md" fixed='top'/>
+    <div>
+    <Header expand="md" container="md" />
+    <div>some content</div>
+    <Footer/>
    
-    </>
+    </div>
   )
 } 
 
