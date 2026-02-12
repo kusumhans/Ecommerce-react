@@ -1,7 +1,10 @@
+// import css
 import './App.css'
+// import custom component
 import Footer from './component/Footer/Footer'
 import Header from './component/Navbar/Header'
-import Home from './pages/home/home'
+import MainRouters from './routers/MainRouters'
+
 function App() {
 
   return (
@@ -11,11 +14,10 @@ function App() {
     expand="md" 
     container="md" 
     />
-    <br /><br /><br /><br /><br /><br />
-    <Home />
+    <MainRouters />
 
     {/* common footer for all pages */}
-    <Footer/>
+    <Footer />
    
     </div>
   )

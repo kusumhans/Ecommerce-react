@@ -1,0 +1,7 @@
+.error-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 7rem 0 16rem 0;
+}

@@ -3,7 +3,7 @@ function Footer(){
     return (
         <div>
             <footer 
-            style={{marginTop:'15rem'}} 
+            style={{marginTop:'10rem'}} 
             className="footer d-flex justify-content-evenly py-3 bg-body-tertiary"
              >
                 <div>About</div>
