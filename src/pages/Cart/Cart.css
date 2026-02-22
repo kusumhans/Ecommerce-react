@@ -21,7 +21,7 @@
 }
 .order-detail-product{
     margin-top: 20px;
-    /* margin-bottom: 2rem; */
+    margin-bottom: 2rem;
 }
 .order-detail-product-image {
     flex-basis: 25%;
@@ -31,7 +31,7 @@
     max-width: 100%;
 }
 .order-details-product-data{
-    flex-basis: 65%;
+    flex-basis: 63%;
     padding: 0 1rem;
     font-size: 1.5rem;
 }
@@ -41,7 +41,7 @@
 }
 .order-detail-product-action{
     /* background-color: red; */
-    flex-basis: 10%;
+    flex-basis: 19%;
 }
 .order-detail-product-remove{
     margin-top: 1rem;

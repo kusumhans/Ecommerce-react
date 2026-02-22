@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 import './Cart.css'
+import CartProduct from '../../component/CartProduct/CartProduct'
+import ImageProduct from  '../../assets/-original-imahfjsfgu7vjkvw.webp'
 
 export default function Cart(){
     return( 
@@ -11,96 +13,9 @@ export default function Cart(){
           <div className="order-detail d-flex flex-column" id="orderDetail">
             {/* <!-- todo   --> */}
             <div className="order-detail-tittle fw-bold">order Detail</div>
-           <div className="order-deatil-product d-flex flex-row ps-5">
-              <div className="order-detail-product-Image d-flex m-2">
-                <img src="/src/assets/-original-imahfjsfgu7vjkvw.webp" alt="" />
-              </div>
-              <div className="order-detail-product-data d-flex flex-column justify-content-center">
-                <div>Google Pixel 9A (Obsidian, 256 GB)(8 GB RAM ) no.1 backup good to use </div>
-                <div> $39,999</div>
-              </div>
-              <div className="order-detail-product-action d-flex flex-column">
-                <div className="order-detail-product-quality">
-                  <div className="fw-bold">Quality</div>
-                  <div className="form-group">
-                    <select className='form-select'>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                    </select>
-                  </div>
-                </div>
-                <button className='order-detail-product-remove btn btn-danger'>remove</button>
-              </div>
-           </div>
-           <hr />
-           <div className="order-deatil-product d-flex flex-row ps-5">
-              <div className="order-detail-product-Image d-flex m-2">
-                <img src="/src/assets/-original-imahfjsfgu7vjkvw.webp" alt="" />
-              </div>
-              <div className="order-detail-product-data d-flex flex-column justify-content-center">
-                <div>Google Pixel 9A (Obsidian, 256 GB)(8 GB RAM ) no.1 backup good to use </div>
-                <div> $39,999</div>
-              </div>
-              <div className="order-detail-product-action d-flex flex-column">
-                <div className="order-detail-product-quality">
-                  <div className="fw-bold">Quality</div>
-                  <div className="form-group">
-                    <select className='form-select'>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                    </select>
-                  </div>
-                </div>
-                <button className='order-detail-product-remove btn btn-danger'>remove</button>
-              </div>
-           </div>
-           <hr />
-           <div className="order-deatil-product d-flex flex-row ps-5">
-              <div className="order-detail-product-Image d-flex m-2">
-                <img src="/src/assets/-original-imahfjsfgu7vjkvw.webp" alt="" />
-              </div>
-              <div className="order-detail-product-data d-flex flex-column justify-content-center">
-                <div>Google Pixel 9A (Obsidian, 256 GB)(8 GB RAM ) no.1 backup good to use </div>
-                <div> $39,999</div>
-              </div>
-              <div className="order-detail-product-action d-flex flex-column">
-                <div className="order-detail-product-quality">
-                  <div className="fw-bold">Quality</div>
-                  <div className="form-group">
-                    <select className='form-select'>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                    </select>
-                  </div>
-                </div>
-                <button className='order-detail-product-remove btn btn-danger'>remove</button>
-              </div>
-           </div>
-        
+          <CartProduct productImage={ImageProduct} data={"Google Pixel 9A (Obsidian, 256 GB)(8 GB RAM ) no.1 backup good to use "} price=" $39,999"/> <hr />
+          <CartProduct productImage={ImageProduct} data={"Google Pixel 9A (Obsidian, 256 GB)(8 GB RAM ) no.1 backup good to use "} price=" $39,999"/> <hr />
+          <CartProduct productImage={ImageProduct} data={"Google Pixel 9A (Obsidian, 256 GB)(8 GB RAM ) no.1 backup good to use "} price=" $39,999"/> 
           </div>
           <div className="price-detail d-flex flex-column" id="price-detail">
             <div className="price-detail-box">
