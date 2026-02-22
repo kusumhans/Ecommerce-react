@@ -7,6 +7,8 @@ import ProductDetail from "../pages/ProductDetail/ProductDetal";
 import LogIn from "../pages/Authorization/LogIn";
 import SignUp from "../pages/Authorization/signUp";
 import ForgetPassword from "../pages/Forgetpassword/ForgetPassword";
+import Cart from "../pages/Cart/Cart";
+import CheckOut from "../pages/CheckOut/CheckOut";
 
 export default function MainRouters(){
     return (    
@@ -17,6 +19,8 @@ export default function MainRouters(){
             <Route path="/signin" element={<LogIn/>}/>
             <Route path="/signUp" element={<SignUp/>}/>
             <Route path="/forget" element={<ForgetPassword/>}/>
+            <Route path="/Cart" element={<Cart/>}/>
+            <Route path="/CheckOut" element={<CheckOut/>}/>
             <Route path="*" element={<Error />}/>
         </Routes>
     )

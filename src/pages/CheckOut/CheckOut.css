@@ -1,0 +1,194 @@
+
+.continer-box{
+    background-color: #F1F3F6;
+    
+}
+.row-box{
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.div{
+    background-color: white;
+    width: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    color: #2874F0 ;
+    font-size: 0.9rem;
+    border-radius: 2px;
+}
+.loginbar{
+    background-color: #2874F0;
+    width: 60%;
+    margin-left: 8rem;
+    height: 50px;
+    font-size: 1.3rem;
+    display: flex;
+    color: white;
+    align-items: center;
+}
+.loginorsignup{
+    width: 60%;
+    margin-left: 8rem;
+    background-color: white;
+    border-bottom: rgb(6, 3, 3)
+}
+.rightside{
+    width: 40%;
+    margin-top: 3rem;
+    margin-left: 3rem;
+}
+.termspolicy{
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: gray;
+}
+button{
+    color: white;
+    background-color: rgba(255, 77, 0, 0.867);
+    border: none;
+    width: 80%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    height: 23%;
+}
+.name input{
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.332)  ;
+}
+.leftside{
+    width: 40%;
+    margin-top: 3rem;
+    margin-left: 5rem;
+}
+.Advantages{
+    color: rgba(128, 128, 128, 0.608);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+.orders{
+    color: black;
+    font-family: sans-serif;
+    font-size: 0.87rem;
+    margin-bottom: 1.5rem;
+
+}
+.truck{
+    margin-right: 1rem;
+    color: #2874F0;
+}
+
+.alerts{
+     color: black;
+    font-family: sans-serif;
+    font-size: 0.87rem;
+    margin-bottom: 1.5rem;
+}
+.bell{
+    margin-right: 1rem;
+    color: #2874F0;
+}
+.Reviews{
+    color: black;
+    font-family: sans-serif;
+    font-size: 0.87rem;
+    margin-bottom: 1.5rem;
+}
+.star{
+    margin-right: 1rem;
+    color: #2874F0;
+}
+.Delivery{
+    height: 40px;
+    width: 60%;
+    margin-left: 8rem;
+    margin-top: 1rem;
+    background-color: white;
+    color: hwb(0 36% 60% / 0.64);
+    font-weight: 700;
+    padding-left: 4rem;
+    display: flex;
+    align-items: center;
+}
+.Delivery::before{
+    content: "1";
+     background-color: rgba(128, 128, 128, 0.097);
+    width: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    color: #2874F0 ;
+    font-size: 0.9rem;
+    border-radius: 2px;
+}
+.ordersummary{
+    height: 40px;
+    width: 60%;
+    margin-left: 8rem;
+    margin-top: 1rem;
+    background-color: white;
+    color: hwb(0 36% 60% / 0.64);
+    font-weight: 700;
+    padding-left: 4rem;
+    display: flex;
+    align-items: center;
+}
+.ordersummary::before{
+    content: "2";
+     background-color: rgba(128, 128, 128, 0.097);
+    width: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    color: #2874F0 ;
+    font-size: 0.9rem;
+    border-radius: 2px;
+}
+.paymentoption{
+    height: 40px;
+    width: 60%;
+    margin-left: 8rem;
+    margin-top: 1rem;
+    background-color: white;
+    color: hwb(0 36% 60% / 0.64);
+    font-weight: 700;
+    padding-left: 4rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.paymentoption::before{
+    content: "3";
+     background-color: rgba(128, 128, 128, 0.097);
+    width: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    color: #2874F0 ;
+    font-size: 0.9rem;
+    border-radius: 2px;
+
+}
+hr{
+    color: gray;
+}
+.rightfooter {
+    margin-left: 5rem;
+    font-size: .9rem;
+    color: rgb(77, 75, 75);
+    width: 70%;
+}
+.link{
+    margin-left: 3rem;
+}
+.leftfooter  {
+    font-size: .9rem;
+    color: rgb(77, 75, 75);
+}

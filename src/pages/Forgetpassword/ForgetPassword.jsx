@@ -11,7 +11,7 @@ export default function ForgetPassword(){
                     <h6 className='email-text mb-3'>Email(Required)</h6>
                     <input type="text" placeholder="Enter Email/Mobile number"className='input mb-5' />
                     <p className='term-policy mb-4 text-center'>By continuing, you agree to shopCart Terms of Use and Privacy Policy.</p>
-                    <button className="btn btn-primary ">REQUEST OTP    </button>
+                    <button className="request btn btn-primary ">REQUEST OTP</button>
                     </div>
             </div>
         </div>

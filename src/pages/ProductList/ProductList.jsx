@@ -16,7 +16,7 @@ function ProductList(){
                         <FilterProducts />
                     <div className="product-list-box" id="productlist">
                     {/* <!-- list of product --> */}
-                        <ProductBox productImage={productImage} name={"Samsong 17"} price='1000' />
+                        <ProductBox productImage={productImage} name={"google Pixel 9A"} price='$39,999' />
                     </div> 
                 </div>
              </div>

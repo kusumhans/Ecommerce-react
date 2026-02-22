@@ -1,6 +1,7 @@
 // import css
 import './ProductDetail.css'
 import productImage from '../../assets/-original-imahfjsfgu7vjkvw.webp'
+import { Link } from 'react-router-dom'
 
 export default function ProductDetail(){
     return(
@@ -17,7 +18,7 @@ export default function ProductDetail(){
                    <div className="product-detail-box  d-flex flex-column">
                     <div id="product-detail">
                         <div className="product-name" id="product-name">Google Pixel 9A (Obsidian, 256 GB)(8 GB RAM )</div>
-                        <div className="product-price" id="product-price">20% <span style={{textDecoration: "line-through", fontWeight:'lighter'}}>& nbsp;49,999</span>&nbsp;$39,999
+                        <div className="product-price" id="product-price">20% <span style={{textDecoration: "line-through", fontWeight:'lighter'}}>&nbsp;49,999</span>&nbsp;$39,999
                         </div>
                          <div className="product-description" id="product-description">
                             <div className="product-description-title ">Google Pixel</div>
@@ -30,10 +31,10 @@ export default function ProductDetail(){
                         <i className="ri-shopping-cart-fill"></i>
                         ADD TO CART
                      </div> 
-                     <a href="cart.html" className="product-detail-action btn btn-warning text-decoration-none">
+                     <Link to="/Cart" className="product-detail-action btn btn-warning text-decoration-none">
                         <i className="ri-flashlight-line"></i>
                         BUY NOW
-                     </a>
+                     </Link>
                    </div>
                     </div>
                 </div>
