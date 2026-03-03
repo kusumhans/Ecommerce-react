@@ -9,7 +9,7 @@ function Home(){
  
     async function downloadCategeries(){
         const response = await axios.get(getALLCategories());
-        setCategeries(response.data)
+        setCategeries(response.data);
     }
 
     useEffect(() =>{
@@ -24,7 +24,7 @@ function Home(){
                <h2 className="home-tittle text-center">Welcome to shop Cart</h2>
                <div className="category-list  d-flex flex-row justify-content-between align-item-center" id="categoryList">
                   <CategoryItem ItemName="All Products"/>
-                  {categeries && categeries.map(category =>  <CategoryItem ItemName={category} kdy={category}/>)}
+                  {categeries && categeries.map(category =>  <CategoryItem ItemName={category} key={category}/>)}
                     
                </div>
                <div className="category-tittle text-center">

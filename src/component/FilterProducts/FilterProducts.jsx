@@ -8,14 +8,14 @@ export default function FilterProducts(){
 
     return(
         <div>
-             <div className="product-list-sidebar d-flex flex-column">
+             <div className="product-list-sidebar d-flex flex-column ">
                     <div className="sidebar-tittle">
                         Search product
                     </div>
                     <div className="sidebar-search form-group">
                         <input type="search" placeholder="search by name" id="search-input"/>
                     </div>
-                    <div className="sidebar-category fw-bold">category</div>
+                    <div className="sidebar-category ">category</div>
                     <div id="category">
                       {/* <!-- category are populated by js --> */}
 
