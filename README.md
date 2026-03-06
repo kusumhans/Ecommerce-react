@@ -172,7 +172,12 @@ Features
 - Calculates subtotal and final amount automatically
 - Simple and user-friendly checkout flow
 - Responsive design for mobile and desktop devices
-- 
+
+
+## 📸 Screenshots
+
+![Home page] (./screenshorts/home.jpg)
+
 ## ⚙️ Installation & Setup
 
 Follow these steps to run the project locally.
@@ -180,6 +185,7 @@ Follow these steps to run the project locally.
 ### 1️⃣ Clone the repository
 
 ```bash
+
 git clone <your-repo-url>
 cd <repo-folder>
 
@@ -218,6 +224,4 @@ Please ensure your code follows the project structure and coding standards.
 If you'd like, I can also give you a **full professional README ending section** (License + Author + GitHub profile + project badges) that makes your repository look much more polished for internship recruiters. 🚀
 
 
-## 📸 Screenshots
 
-![Home page] (./screenshorts/home.jpg)
