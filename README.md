@@ -220,4 +220,4 @@ If you'd like, I can also give you a **full professional README ending section**
 
 ## 📸 Screenshots
 
-![Home Page](./screenshots/home.jpg)
+![Home page] (./screenshorts/home.jpg)
