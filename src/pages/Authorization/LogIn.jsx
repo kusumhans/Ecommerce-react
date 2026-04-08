@@ -1,9 +1,38 @@
 // import css
+import { useRef } from 'react';
 import Auth from '../../component/Auth/Auth'
 import './Auth.css';
-import { Link } from "react-router-dom";
+import Cookies from 'js-cookie';
+import { Link, useNavigate } from "react-router-dom";
+import axios from 'axios';
+import { signin } from '../../apis/fakeStoreProductApis';
+import { useCookies } from 'react-cookie';
+
 
 export default function LogIn(){
+
+    const authRef = useRef(null);
+    const navigate = useNavigate();
+    const [token, setToken] = useCookies(['jwt-token'])
+
+    async function onAuthFormSubmit(formDetails) {
+        try{
+            const response = await axios.post(signin(),{
+                username : formDetails.username,
+                email : formDetails.email,
+                password : formDetails.password 
+            })
+            // console.log(response)
+            setToken('jwt-token', response.data.token)
+            console.log(token);
+            navigate('/');
+        }
+        catch(error){
+            authRef.current.resetFormData();
+            console.log(error);
+        }
+    }
+
 
 
     return(
@@ -16,7 +45,7 @@ export default function LogIn(){
             <div className="container-info">
             <div className="Loginwrapper" id="LoginForm">
             <h2 className='Login text-center'>Login</h2>
-                <Auth/>    
+                <Auth onSubmit={onAuthFormSubmit} ref={authRef}/>    
             <div className="signup-btn text-center text-info" id="showSignupBtn" >Don't have an Account? Sign up</div>
             <div className="signup text-center">
                 <Link to='/signup'>Logout</Link>

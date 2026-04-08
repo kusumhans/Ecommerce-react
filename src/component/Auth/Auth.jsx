@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from 'react';
+import React, { useEffect, useImperativeHandle, useState } from 'react';
 
-export default function Auth({ onSubmit, resetForm }){
+ function Auth({ onSubmit }, ref){
     const[form, setForm] = useState({username: '',email: '', password: '', isLoading:false})
 
     function updateUsername(updateUsername){
@@ -15,13 +15,20 @@ export default function Auth({ onSubmit, resetForm }){
     }
 
     function onFormSubmit() {
-        setForm({...form, isLoading:true})
-        onSubmit(form);
+        setForm({...form, isLoading:true})  
+        onSubmit(form, resetForm);
     }
-    useEffect(()=>{
-        setForm({username: '', email:'', password:'', isLoading:false})
-    }, [resetForm])
-
+    function resetForm() {
+        ({username: '',email: '', password: '', isLoading:false})
+    }
+    useImperativeHandle(ref, ()=> {
+        return{
+            resetFormData: resetForm
+        }
+    },[])
+    useEffect(() => {
+        setForm({email: '', password: '', username: '', isLoading: false});
+    }, [])
     return (
         <div>
             
@@ -32,7 +39,7 @@ export default function Auth({ onSubmit, resetForm }){
                  <input type="email" onChange={(e)=>updateEmail(e.target.value)} value={form.email} className="form-control" placeholder="Email"  />
             </div>
             <div className="input-group">       
-                 <input type="password" onChange={(e)=>updatePassword(e.target.value)} value={form.password} className="form-control" placeholder="password"  />
+                 <input type="password" onChange={(e)=>updatePassword(e.target.value)} value={form.password} className="form-control" placeholder="password"/>
             </div>
             
             <div className="input-group login-btn" >
@@ -49,3 +56,4 @@ export default function Auth({ onSubmit, resetForm }){
         </div>
     )
 }
+export default React.forwardRef(Auth);
