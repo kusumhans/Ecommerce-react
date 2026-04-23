@@ -15,7 +15,7 @@ function ProductList(){
     const [query] = useSearchParams();
 
     async function downloadeProducts(category) {
-        const downloadedUrl = category ? `${getALLProducts()}/category/${category}`  : getALLProducts();
+        const downloadedUrl = category ? `${getALLProducts()}/category/${category}` : getALLProducts();
         const response = await axios.get(downloadedUrl);
         setProducts(response.data);
     }
@@ -24,7 +24,7 @@ function ProductList(){
         downloadeProducts(query.get('category'));
     },[query.get('category')])
 
-    return(
+    return( 
         <>
             <div classNameName="container">
                 <div classNameName="row">
@@ -34,7 +34,7 @@ function ProductList(){
                     <div className="product-list-box" id="productlist">
                     {/* <!-- list of product --> */}
                         {products && products.map(  
-                            (product) =>  <ProductBox 
+                            (product) => <ProductBox 
                                     productId={product.id}
                                     productImage={product.image} 
                                     name={product.title} 

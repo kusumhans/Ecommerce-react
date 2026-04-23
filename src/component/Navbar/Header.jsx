@@ -38,7 +38,7 @@ function Header(props) {
                 Options
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>cart</DropdownItem>
+                <DropdownItem>Cart</DropdownItem>
                 <DropdownItem>Settings</DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem>

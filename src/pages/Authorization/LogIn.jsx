@@ -7,6 +7,8 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
 import { signin } from '../../apis/fakeStoreProductApis';
 import { useCookies } from 'react-cookie';
+import { jwtDecode } from "jwt-decode";
+
 
 
 export default function LogIn(){
@@ -23,6 +25,8 @@ export default function LogIn(){
                 password : formDetails.password 
             })
             // console.log(response)
+            const tokenDecode = jwt_decode(response.data.token);
+            console.log(tokenDecode);
             setToken('jwt-token', response.data.token)
             console.log(token);
             navigate('/');

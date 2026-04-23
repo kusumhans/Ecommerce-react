@@ -6,9 +6,7 @@ function ProductBox({productImage, name, price, productId}){
     
     return (    
              <Link  
-             to={`/products/${productId}`}
-             href="product-detail.html" 
-             target="_blank" 
+             to={`/product/${productId}`}
              className="product-item text-decoration-none d-inline-block">
                     <div className="product-image">
                         <img src={productImage} alt="" />
@@ -18,4 +16,4 @@ function ProductBox({productImage, name, price, productId}){
              </Link> 
     )
 }
-export default ProductBox   
+export default ProductBox;

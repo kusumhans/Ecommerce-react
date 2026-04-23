@@ -11,24 +11,36 @@ export default function ProductDetail(){
     const[product, setProduct] =  useState(null);
     const[added, setAdded] = useState(false)
 
-    const {id} = useParams()
+    const {id} = useParams();
 
     async function downloadedUrl(id){
-        const response = await axios.get(getProduct(id));
+        try {
+            const response = await axios.get(getProduct(id));
+            console.log("API URL:", getProduct(id));
+            console.log("FINAL URL:", getProduct(id));
+            console.log("DATA:", response.data);
+
+        if (typeof response.data === "string") {
+            console.error("❌ API returned HTML, not JSON");
+            return;
+        }
+
         setProduct(response.data);
-        console.log(response.data);
+            
+        } catch (error) {
+            console.log("ERROR:", error);
+        }
     }
     useEffect(()=>{
         downloadedUrl(id);
-    },[])
+    }, [id]);
          
 
      const  addedTOCart = ()=>{
-            setAdded(true)
+            setAdded(true)  
         }
-
+        if (!product) return <h2 className='text-center'>Loading...</h2>;
     return(
-        product && (
         <div>
             <div className="container ">
               <div className="row ">
@@ -46,7 +58,10 @@ export default function ProductDetail(){
                          <div className="product-description" id="product-description">
                             <div className="product-description-title ">description</div>
                             <div className="product-description ">{product.description}</div>
-                            <div className="product-description-data" id="product-description-data"><span style={{color:'GrayText', fontWeight:'500'}}>Raiting and Reviews </span> <br /><span style={{color:'GrayText', fontWeight:'400', fontSize:'1.2rem', borderRadius: '2rem', border:'2px solid ', paddingRight:'0.5rem'}}>💚{product.rating.rate}</span>&nbsp;   <span style={{color:'GrayText', fontWeight:'400', fontSize:'1.2rem', borderRadius: '2rem', border:'2px solid ', paddingRight:'0.5rem'}}>❤️{product.rating.count}</span> </div>
+                            <div>
+                               ⭐ {product?.rating?.rate}
+                               ❤️ {product?.rating?.count}
+                            </div>
                         </div>
                     </div>
 
@@ -65,5 +80,6 @@ export default function ProductDetail(){
             </div>
           </div>
         </div>)
-    )
+    
+    
 }
